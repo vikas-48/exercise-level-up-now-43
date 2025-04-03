@@ -30,7 +30,7 @@ const Index = () => {
             className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-6 flex items-center gap-2"
           >
             <LogIn className="h-4 w-4" />
-            <span>Login to Dashboard</span>
+            <span>Go to Dashboard</span>
           </Button>
         </div>
       </div>
