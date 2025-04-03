@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, LogIn } from "lucide-react";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -12,12 +12,27 @@ const Index = () => {
     navigate(`/${level.toLowerCase()}`);
   };
 
+  const handleLogin = () => {
+    navigate('/dashboard');
+  };
+
   return (
     <div className="min-h-screen bg-slate-900 flex flex-col">
       {/* Header */}
       <div className="w-full bg-gradient-to-r from-blue-700 to-blue-500 py-8 px-4">
         <h1 className="text-3xl font-bold text-white text-center">Level Up Now</h1>
         <p className="text-white text-center mt-2">Choose your workout level</p>
+        
+        {/* Login Button */}
+        <div className="flex justify-center mt-4">
+          <Button 
+            onClick={handleLogin}
+            className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-6 flex items-center gap-2"
+          >
+            <LogIn className="h-4 w-4" />
+            <span>Login to Dashboard</span>
+          </Button>
+        </div>
       </div>
 
       {/* Main Content */}

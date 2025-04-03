@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Beginner from "./pages/Beginner"; 
 import Intermediate from "./pages/Intermediate";
 import Advanced from "./pages/Advanced";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/beginner" element={<Beginner />} />
           <Route path="/intermediate" element={<Intermediate />} />
           <Route path="/advanced" element={<Advanced />} />
