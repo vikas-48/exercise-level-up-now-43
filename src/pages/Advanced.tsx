@@ -20,28 +20,28 @@ const advancedExercises: Exercise[] = [
     name: 'Side Plank Left',
     count: '15 Reps',
     countType: 'reps',
-    image: '/side-plank.png'
+    image: 'https://images.unsplash.com/photo-1616279967983-ec413476e824?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3'
   },
   {
     id: 2,
     name: 'Jumping Jacks',
     count: '00:30',
     countType: 'time',
-    image: '/jumping-jacks.png'
+    image: 'https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3'
   },
   {
     id: 3,
     name: 'Mountain Climber',
     count: '20 Reps',
     countType: 'reps',
-    image: '/mountain-climber.png'
+    image: 'https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3'
   },
   {
     id: 4,
     name: 'Burpees',
     count: 'x12',
     countType: 'reps',
-    image: '/burpees.png'
+    image: 'https://images.unsplash.com/photo-1611672585731-fa10603fb9e0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3'
   }
 ];
 
@@ -101,8 +101,12 @@ const Advanced = () => {
             <React.Fragment key={exercise.id}>
               <div className="flex items-center py-2">
                 <Menu className="text-gray-400 mr-4" />
-                <div className="w-16 h-16 bg-gray-100 rounded-lg mr-4 flex items-center justify-center">
-                  <img src={exercise.image} alt={exercise.name} className="w-12 h-12" />
+                <div className="w-16 h-16 bg-gray-100 rounded-lg mr-4 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={exercise.image} 
+                    alt={exercise.name} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="flex-1">
                   <h4 className="text-xl font-semibold">{exercise.name}</h4>

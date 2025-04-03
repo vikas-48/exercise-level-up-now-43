@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, MoreVertical, Menu, ShuffleIcon } from 'lucide-react';
@@ -20,28 +19,28 @@ const intermediateExercises: Exercise[] = [
     name: 'Push-Ups',
     count: 'x8',
     countType: 'reps',
-    image: '/push-ups.png'
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3'
   },
   {
     id: 2,
     name: 'Cobra Stretch',
     count: '00:20',
     countType: 'time',
-    image: '/cobra-stretch.png'
+    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3'
   },
   {
     id: 3,
     name: 'Mountain Climber',
     count: 'x16',
     countType: 'reps',
-    image: '/mountain-climber.png'
+    image: 'https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3'
   },
   {
     id: 4,
     name: 'Wide Arm Push-Ups',
     count: 'x8',
     countType: 'reps',
-    image: '/wide-arm-pushups.png'
+    image: 'https://images.unsplash.com/photo-1566351557863-3e58081256d5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3'
   }
 ];
 
@@ -101,8 +100,12 @@ const Intermediate = () => {
             <React.Fragment key={exercise.id}>
               <div className="flex items-center py-2">
                 <Menu className="text-gray-400 mr-4" />
-                <div className="w-16 h-16 bg-gray-100 rounded-lg mr-4 flex items-center justify-center">
-                  <img src={exercise.image} alt={exercise.name} className="w-12 h-12" />
+                <div className="w-16 h-16 bg-gray-100 rounded-lg mr-4 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={exercise.image} 
+                    alt={exercise.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="flex-1">
                   <h4 className="text-xl font-semibold">{exercise.name}</h4>
