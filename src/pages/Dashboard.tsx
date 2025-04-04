@@ -34,10 +34,6 @@ const Dashboard = () => {
     navigate('/beginner'); // Navigate to beginner exercises as default
   };
 
-  const handleViewLevels = () => {
-    navigate('/levels');
-  };
-
   const handleLogout = () => {
     // In a real app, this would handle logout logic
     console.log('User logged out');
@@ -173,19 +169,17 @@ const Dashboard = () => {
                 </CardContent>
               </Card>
             ))}
+            <Card className="border-dashed border-2 border-gray-600 bg-transparent hover:bg-slate-800/30 transition-colors cursor-pointer">
+              <CardContent className="p-4 flex flex-col items-center justify-center h-full text-gray-400">
+                <p className="text-4xl mb-2">+</p>
+                <p className="font-medium">More to earn</p>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
-        {/* Fixed Bottom Buttons */}
-        <div className="fixed bottom-8 right-8 flex gap-4">
-          <Button
-            onClick={handleViewLevels}
-            className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6 py-6 flex items-center gap-2 shadow-lg"
-          >
-            <span className="font-medium">View Adventure Levels</span>
-            <ChevronRight className="h-5 w-5" />
-          </Button>
-          
+        {/* Fixed Bottom Right Button */}
+        <div className="fixed bottom-8 right-8">
           <Button
             onClick={handleGoToExercises}
             className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-6 flex items-center gap-2 shadow-lg"
